@@ -1,0 +1,4 @@
+<a href="{% url 'crud:createInfo' %}"><button>Create</button></a>
+{% for info in infos %}
+<a href="{% url 'crud:info' info.pk %}"><h1>{{info}}</h1></a>
+{% endfor %}

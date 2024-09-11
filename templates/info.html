@@ -1,0 +1,14 @@
+<h1>firstName</h1>
+<p> {{info.firstName}} </p>
+<h1>middleName</h1>
+<p> {{info.middleName}} </p>
+<h1>lastName</h1>
+<p> {{info.lastName}} </p>
+<h1>dob</h1>
+<p> {{info.dob}} </p>
+<h1>address</h1>
+<p> {{info.address.city}},{{info.address.state}},{{info.address.city}} </p>
+
+
+<a href="{% url 'crud:editInfo' info.pk %}"><button>Edit</button></a>
+<a href="{% url 'crud:deleteInfo' info.pk %}"><button>Delete</button></a>
