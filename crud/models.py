@@ -8,7 +8,7 @@ class Address(models.Model):
 
 class Info(models.Model):
     firstName = models.CharField(max_length=25)
-    middleName = models.CharField(max_length=25)
+    middleName = models.CharField(max_length=25,blank=True)
     lastName = models.CharField(max_length=25)
     dob = models.DateField()
-    address = models.ForeignKey(Address,null=True,on_delete=models.SET_NULL,related_name="infos")
+    address = models.ForeignKey(Address,null=True,blank=True,on_delete=models.SET_NULL,related_name="infos")
